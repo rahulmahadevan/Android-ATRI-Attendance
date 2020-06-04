@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.edu.atri.atriupdates"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+          
+    <application
+        android:debuggable="true"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name="in.edu.atri.atriupdates.Splash"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="in.edu.atri.atriupdates.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.Login" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="in.edu.atri.atriupdates.RegisterPage"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.Register"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="in.edu.atri.atriupdates.CrHome"
+            android:label="CR Home">
+            <intent-filter>
+                <action android:name="android.intent.Cr"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="in.edu.atri.atriupdates.FacultyHome"
+            android:label="Range-wise Attendance">
+            <intent-filter>
+                <action android:name="android.intent.Faculty"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="in.edu.atri.atriupdates.FacPreHome"
+            android:label="Faculty Home">
+            <intent-filter>
+                <action android:name="android.intent.FacPreHome"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+      	<activity 
+            android:name="in.edu.atri.atriupdates.Day
+            android:label="Faculty Home">
+            <intent-filter>
+                <action android:name="android.intent.FacPreHome"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="in.edu.atri.atriupdates.AttendanceView"
+            android:label="Attendance View">
+            <intent-filter>
+                <action android:name="android.intent.Attendance"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+                <activity 
+            android:name="in.edu.atri.atriupdates.ConfirmAttendance"
+            android:label="Confirmation Page">
+            <intent-filter>
+                <action android:name="android.intent.Confirm"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="in.edu.atri.atriupdates.FacultyConfirmation"
+            android:label="Confirmation Page">
+            <intent-filter>
+                <action android:name="android.intent.FConfirmation"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="in.edu.atri.atriupdates.UncheckUpdate"
+            android:label="Class List">
+            <intent-filter>
+                <action android:name="android.intent.Uncheck"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+    </application>
+
+</manifest>
