@@ -2,26 +2,25 @@
 <!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="in.edu.atri.atriupdates"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="xyz.atriams.atri"
+    android:versionCode="10"
+    android:versionName="1.0.9" >
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
           
     <application
-        android:debuggable="true"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
         <activity
-            android:name="in.edu.atri.atriupdates.Splash"
+            android:name="com.example.attendo_thecollegeapp.Splash"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
             <intent-filter>
@@ -31,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="in.edu.atri.atriupdates.MainActivity"
+            android:name="com.example.attendo_thecollegeapp.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.Login" />
@@ -40,8 +39,8 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name="in.edu.atri.atriupdates.RegisterPage"
-            android:label="@string/app_name">
+            android:name="com.example.attendo_thecollegeapp.RegisterPage"
+            android:label="CR Registration">
             <intent-filter>
                 <action android:name="android.intent.Register"/>
                 
@@ -49,8 +48,17 @@
             </intent-filter>            
         </activity>
         <activity 
-            android:name="in.edu.atri.atriupdates.CrHome"
-            android:label="CR Home">
+            android:name="com.example.attendo_thecollegeapp.FacultyRegisteration"
+            android:label="Faculty Registration">
+            <intent-filter>
+                <action android:name="android.intent.FacRegister"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="com.example.attendo_thecollegeapp.CrHome"
+            android:label="ATRI Attendance">
             <intent-filter>
                 <action android:name="android.intent.Cr"/>
                 
@@ -58,7 +66,7 @@
             </intent-filter>            
         </activity>
         <activity 
-            android:name="in.edu.atri.atriupdates.FacultyHome"
+            android:name="com.example.attendo_thecollegeapp.FacultyHome"
             android:label="Range-wise Attendance">
             <intent-filter>
                 <action android:name="android.intent.Faculty"/>
@@ -67,7 +75,34 @@
             </intent-filter>            
         </activity>
         <activity 
-            android:name="in.edu.atri.atriupdates.FacPreHome"
+            android:name="com.example.attendo_thecollegeapp.HodHome"
+            android:label="Faculty Home">
+            <intent-filter>
+                <action android:name="android.intent.Hod"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="com.example.attendo_thecollegeapp.ForgotPassword"
+            android:label="Forgot Password">
+            <intent-filter>
+                <action android:name="android.intent.ForgotPassword"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="com.example.attendo_thecollegeapp.FacultyForgotPassword"
+            android:label="Forgot Password">
+            <intent-filter>
+                <action android:name="android.intent.FacultyForgotPassword"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="com.example.attendo_thecollegeapp.FacPreHome"
             android:label="Faculty Home">
             <intent-filter>
                 <action android:name="android.intent.FacPreHome"/>
@@ -76,16 +111,16 @@
             </intent-filter>            
         </activity>
       	<activity 
-            android:name="in.edu.atri.atriupdates.Day
-            android:label="Faculty Home">
+            android:name="com.example.attendo_thecollegeapp.DayWise"
+            android:label="Day-wise Attendance">
             <intent-filter>
-                <action android:name="android.intent.FacPreHome"/>
+                <action android:name="android.intent.DayWise"/>
                 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>            
         </activity>
         <activity 
-            android:name="in.edu.atri.atriupdates.AttendanceView"
+            android:name="com.example.attendo_thecollegeapp.AttendanceView"
             android:label="Attendance View">
             <intent-filter>
                 <action android:name="android.intent.Attendance"/>
@@ -94,7 +129,7 @@
             </intent-filter>            
         </activity>
                 <activity 
-            android:name="in.edu.atri.atriupdates.ConfirmAttendance"
+            android:name="com.example.attendo_thecollegeapp.ConfirmAttendance"
             android:label="Confirmation Page">
             <intent-filter>
                 <action android:name="android.intent.Confirm"/>
@@ -103,8 +138,8 @@
             </intent-filter>            
         </activity>
         <activity 
-            android:name="in.edu.atri.atriupdates.FacultyConfirmation"
-            android:label="Confirmation Page">
+            android:name="com.example.attendo_thecollegeapp.FacultyConfirmation"
+            android:label="Faculty Confirmation">
             <intent-filter>
                 <action android:name="android.intent.FConfirmation"/>
                 
@@ -112,7 +147,25 @@
             </intent-filter>            
         </activity>
         <activity 
-            android:name="in.edu.atri.atriupdates.UncheckUpdate"
+            android:name="com.example.attendo_thecollegeapp.UncheckCorrections"
+            android:label="Class List">
+            <intent-filter>
+                <action android:name="android.intent.Corrections"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="com.example.attendo_thecollegeapp.FacultyUpdate"
+            android:label="Update Attendance">
+            <intent-filter>
+                <action android:name="android.intent.FacultyUpdate"/>
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>            
+        </activity>
+        <activity 
+            android:name="com.example.attendo_thecollegeapp.UncheckUpdate"
             android:label="Class List">
             <intent-filter>
                 <action android:name="android.intent.Uncheck"/>
